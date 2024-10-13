@@ -9,12 +9,12 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="about" class="active">About</a></li>
-        <li><a href="single-post">Single Post</a></li>
+        <li><%= link_to "Home", root_path, class: @menu == :home ? "active" : nil %></li>
+        <li><%= link_to "About", about_path, class: @menu == :about ? "active" : nil %></li>
+        <li><%= link_to "Single Post", single_post_path, class: @menu == :single_post ? "active" : nil %></a></li>
         <li class="dropdown"><a href="#"><span>Categories</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li><a href="category">Category 1</a></li>
+            <li><%= link_to "Category 1", category_path, class: @menu == :category ? "active" : nil %></li>
             <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="#">Deep Dropdown 1</a></li>
@@ -27,10 +27,10 @@
             <li><a href="category">Category 2</a></li>
             <li><a href="category">Category 3</a></li>
             <li><a href="category">Category 4</a></li>
-            <li><a href="starter-page">Starter Page</a></li>
+            <li><%= link_to "Starter Page", starter_page_path, class: @menu == :starter_page ? "active" : nil %></li>
           </ul>
         </li>
-        <li><a href="contact">Contact</a></li>
+        <li><%= link_to "Contact", contact_path, class: @menu == :contact ? "active" : nil %></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
