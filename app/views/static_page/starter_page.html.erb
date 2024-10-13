@@ -4,18 +4,12 @@
   <% @menu = :starter_page %>
 <% end %>
 
-<!-- Page Title -->
-<div class="page-title">
-  <div class="container d-lg-flex justify-content-between align-items-center">
-    <h1 class="mb-2 mb-lg-0">Starter Page</h1>
-    <nav class="breadcrumbs">
-      <ol>
-        <li><a href="index.html">Home</a></li>
-        <li class="current">Starter Page</li>
-      </ol>
-    </nav>
-  </div>
-</div><!-- End Page Title -->
+<% content_for :breadcrumbs_setting do %>
+  <% @breadcrumbs = [
+       [ "Home", root_path ],
+       [ "Starter Page", nil ],
+     ] %>
+<% end %>
 
 <!-- Starter Section Section -->
 <section id="starter-section" class="starter-section section">

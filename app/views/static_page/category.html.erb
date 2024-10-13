@@ -4,18 +4,12 @@
   <% @menu = :category %>
 <% end %>
 
-<!-- Page Title -->
-<div class="page-title position-relative">
-  <div class="container d-lg-flex justify-content-between align-items-center">
-    <h1 class="mb-2 mb-lg-0">Category</h1>
-    <nav class="breadcrumbs">
-      <ol>
-        <li><a href="index.html">Home</a></li>
-        <li class="current">Categories</li>
-      </ol>
-    </nav>
-  </div>
-</div><!-- End Page Title -->
+<% content_for :breadcrumbs_setting do %>
+  <% @breadcrumbs = [
+       [ "Home", root_path ],
+       [ "Category", nil ],
+     ] %>
+<% end %>
 
 <div class="container">
   <div class="row">
