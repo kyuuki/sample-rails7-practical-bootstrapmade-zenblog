@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= Rails.configuration.setting[:app_name] %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<% content_for :header do %>
+  <%= render "layouts/zenblog/header" %>
+<% end %>
+  
+<% content_for :footer do %>
+  <%= render "layouts/zenblog/footer" %>
+<% end %>
 
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_importmap_tags %>
-  </head>
+<%= render template: "layouts/zenblog/application_base" %>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
